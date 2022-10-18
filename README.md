@@ -43,3 +43,12 @@ Once tests are finished the result will be open in your default browser. If it d
 At the only one assertion is implemented: check that Total Blocking Time is below 200 milliseconds, other metrics are just added to test annotations section in the report. 
 
 
+### TBD
+
+1. Currently only one assertion of one metric is implemented for demo purposes:
+
+       expect(tbt).toBeLessThan(200)
+
+    depending on what exactly needs to be monitored more assertions can be added so test could be automatically marked as failed if monitored values exceed the threshold
+2. Captured metrics are being stored in test annotations, it worth dumping them to i.e. CSV file so it would be possible to compare historic data, build trends, plot charts, etc.
+3. Continuous integration. It makes sense to run the test periodically to check performance degradations            
